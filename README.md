@@ -28,7 +28,7 @@ CM Coding Exercise Submission folder - JavaScript Requirements[8]
 
 ## Test (skip)
 1. Before test, it needs to download and use `jasmine 2.3.4` framework, jasmine is a T/BDD (test/behaviour-driven development), create your test specs before implementation code. I'm still studying on it currently, so I build my ugly impementation code first, just skip it right now, I'll rewrite the code follow its BDD later. 
-2. Write your test under folder `spec`, with a `_spec` suffix, such as `jquery.renderAjax_spec.js`, open it with preferred browsers, if all-pass, the page will be green, otherwise, it will list the error items in red.
+2. Write your test under folder `spec`, with a `_spec` suffix, such as `jquery.renderAjax_spec.js`, write implementation code under `src`, add reference to `SpecRunner.html` and open it with preferred browsers, if all-pass, the page will be green, otherwise, it will list the error items in red.
 
 ## Contributing
 1. Fork it!
