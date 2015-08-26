@@ -16,38 +16,9 @@ CM Coding Exercise Submission folder - JavaScript Requirements[8]
 - "jasmine-jquery"
 
 ## File Structure
-tree view 
-- ├── MIT.LICENSE
-- ├── SpecRunner.html
-- ├── css
-- │   ├── bootstrap.css
-- │   ├── bootstrap.min.css
-- │   └── spinner.css
-- ├── fixtures
-- │   └── fixtures.html
-- ├── img
-- │   ├── glyphicons-halflings-white.png
-- │   ├── glyphicons-halflings.png
-- │   └── spinner.gif
-- ├── index.html
-- ├── lib
-- │   ├── jasmine-2.3.4
-- │   │   ├── boot.js
-- │   │   ├── console.js
-- │   │   ├── jasmine-html.js
-- │   │   ├── jasmine.css
-- │   │   ├── jasmine.js
-- │   │   └── jasmine_favicon.png
-- │   ├── jasmine-jquery.js
-- │   └── jquery.js
-- ├── load_local.html
-- ├── load_remote.html
-- ├── spec
-- │   ├── SpecHelper.js
-- │   └── jquery.renderAjax_spec.js
-- └── src
-- ..   ├── jquery.renderAjax.js
-- ..   └── test.jsonp
+### tree view 
+
+![alt tag](https://cloud.githubusercontent.com/assets/3906272/9496914/f7a49f22-4c55-11e5-89c4-1b2e5d5005d4.png)
 
 ## Usage
 1. Dowload this 'ZIP' source code, extract the ZIP file to your local trusted path
