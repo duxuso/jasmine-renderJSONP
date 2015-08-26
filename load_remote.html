@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Requirement 8</title>
+
+    <!--scripts-->
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="src/jquery.renderAjax.js"></script>
+    <script type="text/javascript" src="src/test.jsonp"></script>
+    <script type="text/javascript" src="http://status.campaignmonitor.com/api/issues/current"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/spinner.css">
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready( function() {
+            var url_remote = "http://status.campaignmonitor.com/api/issues/current";
+            var url_ = null;
+            $('a').renderAjax(url_remote);
+            $('h2').renderAjax(url_);
+        });
+    </script>
+
+</head>
+<body>
+<header>
+    <div id="spinner" class="spinner" style="display:none;">
+        <img id="img-spinner" src="img/spinner.gif" alt="Loading"/>
+    </div>
+</header>
+
+<div id="main" class="container" style="padding-top:30px">
+    <div>
+        <h2>If you load a null URL, it will return a warning</h2>
+    </div>
+    <div>
+        <label>Remote: http://status.campaignmonitor.com/api/issues/current</label><p><a id="a" href="#">Load the current issues list</a></p>
+    </div>
+
+    <div id="results" style="display:none">
+        <!-- Each issue should be rendered with the following template -->
+        <div class="issue-template">
+            <h3>Issue Title - Begin 10 minutes ago</h3> <!-- If status === Unresolved -->
+
+            <h3>Issue Title - Resolved 10 minutes ago</h3> <!-- If status === Resolved -->
+
+            <p>Issue description</p>
+            <div style="padding-left:50px">
+                <p>Updates:</p>
+                <!-- Each update should be rendered with the following template -->
+
+                <div class="update-template">
+                    <p>Update</p>
+
+                    <em>By Mat 10 minutes ago</em>
+
+                    <hr style="width:50%"/>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <!-- Render this if there are no issues returned -->
+        <div class="no-issues-template" id="no-issue">
+            Everybody is happy!
+        </div>
+    </div>
+</div>
+</body>
+</html>
